@@ -160,3 +160,6 @@ compinit
 eval "$(mise activate zsh)"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+
+# opencode
+export PATH=/Users/subbums/.opencode/bin:$PATH
