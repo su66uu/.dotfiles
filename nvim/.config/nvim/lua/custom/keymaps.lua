@@ -11,8 +11,6 @@ vim.keymap.set('n', '<leader>m3', ':CellularAutomaton make_it_rain<CR>', { desc 
 
 -- reload current buffer
 vim.keymap.set('n', '<leader>r', ':e<CR>')
--- keymap to enable terminal mode
-vim.keymap.set('n', '<leader>tt', ':terminal<CR>')
 
 -- copy current file relative path to clipboard 
 vim.keymap.set('n', '<leader>cr', function()
@@ -32,4 +30,41 @@ end, { desc = 'Copy absolute file path to clipboard' })
 vim.keymap.set("n", "<leader>grs", ":A<CR>", { desc = "Switch to spec file" })
 vim.keymap.set("n", "<leader>grm", ":Emodel<CR>", { desc = "Edit model" })
 vim.keymap.set("n", "<leader>grc", ":Econtroller<CR>", { desc = "Edit controller" })
+
+-- Window management keymaps
+
+-- Close pane 2
+vim.keymap.set('n', '<leader>wc', ':wincmd w | close<CR>', { noremap = true, silent = true, desc = 'Close current window' })
+
+-- Navigate between windows
+vim.keymap.set('n', '<leader>wj', ':wincmd j<CR>', { noremap = true, silent = true, desc = 'Move to window below' })
+vim.keymap.set('n', '<leader>wk', ':wincmd k<CR>', { noremap = true, silent = true, desc = 'Move to window above' })
+vim.keymap.set('n', '<leader>wh', ':wincmd h<CR>', { noremap = true, silent = true, desc = 'Move to window left' })
+vim.keymap.set('n', '<leader>wl', ':wincmd l<CR>', { noremap = true, silent = true, desc = 'Move to window right' })
+vim.keymap.set('n', '<leader>ww', ':wincmd w<CR>', { noremap = true, silent = true, desc = 'Cycle to next window' })
+
+-- Create new windows (splits)
+vim.keymap.set('n', '<leader>ws', ':split<CR>', { noremap = true, silent = true, desc = 'Horizontal split'})
+vim.keymap.set('n', '<leader>wv', ':vsplit<CR>', { noremap = true, silent = true, desc = 'Vertical split' })
+
+-- Resize windows
+vim.keymap.set('n', '<leader>w+', ':resize +5<CR>', { noremap = true, silent = true, desc = 'Increase height by 5' })
+vim.keymap.set('n', '<leader>w-', ':resize -5<CR>', { noremap = true, silent = true, desc = 'Decrease height by 5' })
+vim.keymap.set('n', '<leader>w>', ':vertical resize +5<CR>', { noremap = true, silent = true, desc = 'Increase width by 5' })
+vim.keymap.set('n', '<leader>w<', ':vertical resize -5<CR>', { noremap = true, silent = true, desc = 'Decrease width by 5' })
+
+-- Equalize window sizes
+vim.keymap.set('n', '<leader>w=', ':wincmd =<CR>', { noremap = true, silent = true, desc = 'Equalize all window sizes' })
+
+-- Close all other windows
+vim.keymap.set('n', '<leader>wo', ':only<CR>', { noremap = true, silent = true, desc = 'Close all windows except current' })
+
+-- Swap windows
+vim.keymap.set('n', '<leader>wx', ':wincmd x<CR>', { noremap = true, silent = true, desc = 'Swap current window with next' })
+
+-- Move current window to a new tab
+vim.keymap.set('n', '<leader>wt', ':wincmd T<CR>', { noremap = true, silent = true, desc = 'Move window to new tab' })
+
+-- Rotate windows
+vim.keymap.set('n', '<leader>wr', ':wincmd r<CR>', { noremap = true, silent = true, desc = 'Rotate windows clockwise' })
 
