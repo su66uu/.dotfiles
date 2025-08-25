@@ -10,3 +10,6 @@ vim.opt.smartindent = true
 -- views can only be fully collapsed with the global statusline
 vim.opt.laststatus = 3
 
+-- Remember info about open buffers on close
+vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+

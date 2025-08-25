@@ -423,7 +423,6 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>gg', '<cmd>Telescope git_files<CR>', { desc = 'Git tracked files' })
       vim.keymap.set('n', '<leader>gc', '<cmd>Telescope git_commits<CR>', { desc = 'Git commits' })
 
-
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
         -- You can pass additional configuration to Telescope to change the theme, layout, etc.
@@ -749,7 +748,7 @@ require('lazy').setup({
           'foldingRanges',
           'formatting',
           'codeActions',
-          'hover'
+          'hover',
         }
 
         configs.ruby_lsp = {
@@ -760,7 +759,7 @@ require('lazy').setup({
               'RUBY_LSP_BYPASS_BUNDLE=true',
               '/Users/subbums/.local/share/mise/installs/ruby/3.1.4/bin/ruby-lsp',
             },
-            filetypes = { 'ruby' },
+            filetypes = { 'ruby', 'rb', 'erb', 'eruby' },
             root_dir = util.root_pattern('Gemfile', '.git', 'Rakefile'),
             init_optipons = {
               formatters = 'rubocop',
@@ -858,6 +857,11 @@ require('lazy').setup({
     --- @module 'blink.cmp'
     --- @type blink.cmp.Config
     opts = {
+      -- disable for file types
+      disabled_filetypes = {
+        'TelescopePrompt',
+        'markdown',
+      },
       keymap = {
         -- 'default' (recommended) for mappings similar to built-in completions
         --   <c-y> to accept ([y]es) the completion.
