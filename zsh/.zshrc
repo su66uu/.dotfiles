@@ -163,3 +163,6 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # opencode
 export PATH=/Users/subbums/.opencode/bin:$PATH
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
