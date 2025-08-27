@@ -4,6 +4,9 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', '<C-f>', '<C-f>zz')
 vim.keymap.set('n', '<C-b>', '<C-b>zz')
 
+-- Git fugitive keymaps
+vim.keymap.set('n', '<leader>G', ':G<CR>', { desc = 'Git status' })
+
 -- Magic keymaps
 vim.keymap.set('n', '<leader>m1', ':CellularAutomaton game_of_life<CR>', { desc = 'Run Random Cellular Automaton' })
 vim.keymap.set('n', '<leader>m2', ':CellularAutomaton scramble<CR>', { desc = 'Run Glider Cellular Automaton' })

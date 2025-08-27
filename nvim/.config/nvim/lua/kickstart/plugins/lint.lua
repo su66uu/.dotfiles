@@ -5,7 +5,9 @@ return {
     config = function()
       local lint = require 'lint'
       lint.linters_by_ft = {
-        markdown = { 'markdownlint' },
+        go = { 'golangcilint' },
+        markdown = { 'markdownlint-cli2' },
+        yaml = { 'yamllint' },
         json = { 'jsonlint' },
       }
 
