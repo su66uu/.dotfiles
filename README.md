@@ -1,6 +1,6 @@
-# dotfiles
+# .files
 
-Personal configuration files for macOS development environment.
+Personal configuration dot files for macOS development environment.
 
 ## Overview
 
