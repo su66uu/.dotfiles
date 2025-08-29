@@ -71,3 +71,5 @@ vim.keymap.set('n', '<leader>wt', ':wincmd T<CR>', { noremap = true, silent = tr
 -- Rotate windows
 vim.keymap.set('n', '<leader>wr', ':wincmd r<CR>', { noremap = true, silent = true, desc = 'Rotate windows clockwise' })
 
+-- Telescope neoclip
+vim.keymap.set('n', '<leader>y', ':Telescope neoclip<CR>', { desc = 'Open neoclip' })
